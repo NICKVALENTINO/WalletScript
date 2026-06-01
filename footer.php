@@ -1,3 +1,5 @@
 <?php
-mysql_close($db_handle);
+if (isset($db) && $db instanceof PDO) {
+    $db = null;
+}
 ?>
